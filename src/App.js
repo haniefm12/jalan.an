@@ -165,7 +165,7 @@ function App() {
             ?lw lw:objekwisata ?objekwisata.
             ?lw lw:oleh ?oleh;
 
-        FILTER contains(?makanan, "${value.input}")
+        FILTER contains(?oleh, "${value.input}")
         }`
     };
 
@@ -194,10 +194,10 @@ function App() {
     
     return {
       "id": index,
-      "nama": users.song.value,
-      "makanan": users.artist.value,
-      "objekwisata": users.genre.value,
-      "oleh": users.length.value,
+      "nama": users.nama.value,
+      "makanan": users.makanan.value,
+      "objekwisata": users.objekwisata.value,
+      "oleh": users.oleh.value,
     }
   }
 
@@ -210,15 +210,22 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <button onClick={getKota}>Get List</button>
-        <ol>
-          {value.users.map((item, i) => <li key={i}>{item.nama}</li>)}
-        </ol>
-        <div>
-        </div>
-      </header>
-    </div>
+                <header className="App-header">
+                  <input onChange={handleChange} type="text" />
+                  <button onClick={function(event){ getKota()}}>Cari Kota</button>
+                  <button onClick={function(event){ getMakanan()}}>Cari Makanan</button>
+                  <button onClick={function(event){ getObjekWisata()}}>Cari Objek Wisata</button>
+                  <button onClick={function(event){ getOlehOleh()}}>Cari Oleh-oleh</button>
+                  <ol>
+                    {value.users.map((item, i) => 
+                    <li key={i}>
+                      Kota :{item.nama}<br />
+                      Makanan : {item.makanan}<br />
+                      Objek Wisata : {item.objekwisata}<br />
+                      Oleh-oleh : {item.oleh} </li>)}
+                  </ol>
+                </header>
+              </div>
   );
 }
 
