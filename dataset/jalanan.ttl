@@ -1,0 +1,104 @@
+@prefix lw: <http://jalanan.com/ns/listwisata> .
+@prefix id: <http://jalanan.com/ns/data> .
+
+id:001     
+	lw:nama     		"Yogyakarta" ;
+    lw:objekwisata      "Pantai Parang Tritis" ;
+    lw:makanan      	"Gudeg" ;
+    lw:oleh       		"Bakpia" . 
+
+id:002     
+	lw:nama     		"Medan" ;
+    lw:objekwisata      "Tjong A Fie Mansion" ;
+    lw:makanan      	"Arsik" ;
+    lw:oleh       		"Bika Ambon" . 
+	
+id:003
+	lw:nama     		"Palembang" ;
+    lw:objekwisata      "Jembatan Ampera" ;
+    lw:makanan      	"Pempek" ;
+    lw:oleh       		"Kemplang" . 
+	
+id:004
+	lw:nama     		"Bukit Tinggi" ;
+    lw:objekwisata      "Jam Gadang" ;
+    lw:makanan      	"Rendang" ;
+    lw:oleh       		"Kain Songket" .
+
+id:005
+	lw:nama     		"Lembang" ;
+    lw:objekwisata      "De Ranch" ;
+    lw:makanan      	"Ketan" ;
+    lw:oleh       		"Susu Lembang" .	
+	
+id:006
+	lw:nama     		"Semarang" ;
+    lw:objekwisata      "Lawang Sewu" ;
+    lw:makanan      	"bandeng Presto" ;
+    lw:oleh       		"Lumpia Semarang" .
+	
+id:007
+	lw:nama     		"Malang" ;
+    lw:objekwisata      "Jatim Park" ;
+    lw:makanan      	"Baso Malang" ;
+    lw:oleh       		"Apel Malng" .
+	
+id:008
+	lw:nama     		"Raja Ampat" ;
+    lw:objekwisata      "Wajag Island" ;
+    lw:makanan      	"Papeda" ;
+    lw:oleh       		"Koteka" .
+	
+id:009
+	lw:nama     		"Lombok Utara" ;
+    lw:objekwisata      "Gili Trawangan" ;
+    lw:makanan      	"Ayam Taliwang" ;
+    lw:oleh       		"Dodol Rumput Laut" .
+	
+id:010
+	lw:nama     		"Ambon" ;
+    lw:objekwisata      "Benteng Fort Victoria" ;
+    lw:makanan      	"Ikan Kuah Pala" ;
+    lw:oleh       		"Kayu Putih" .
+	
+id:101
+	lw:provinsi	"D.I. Yogyakarta" .
+	
+id:102
+	lw:provinsi	"Sumatera Utara" .
+
+id:103
+	lw:provinsi	"Sumatera Selatan" .
+	
+id:104
+	lw:provinsi	"Sumatera Barat" .
+	
+id:105
+	lw:provinsi	"Jawa Barat" .
+
+id:106
+	lw:provinsi	"Jawa Tengah" .
+	
+id:107
+	lw:provinsi	"Jawa Timur" .
+	
+id:108
+	lw:provinsi	"Papua Barat" .
+	
+id:109
+	lw:provinsi	"Nusa Tenggara Barat" .
+	
+id:110
+	lw:provinsi	"Maluku" .
+	
+	
+id:001 lw:berada id:101 .
+id:002 lw:berada id:102 .
+id:003 lw:berada id:103 .
+id:004 lw:berada id:104 .
+id:005 lw:berada id:105 .
+id:006 lw:berada id:106 .
+id:007 lw:berada id:107 .
+id:008 lw:berada id:108 .
+id:009 lw:berada id:109 .
+id:010 lw:berada id:110 .
