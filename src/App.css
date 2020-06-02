@@ -1,12 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,18 +5,72 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #5d5b6a;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+.Title-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2px + 1vmin);
+  color: #5d5b6a;
+}
+
+.Body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.Isi {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.search{
+  width: 400px;
+  border-style: outset;
+  border-width: 0.5px;
+  border-radius: 7px;
+  margin: 3px;
+  padding: 5px;
+  font-size: calc(8px + 2vmin);
+}
+
+.button{
+  background-color: #bbcfff;
+  border-color: transparent;
+  border-radius: 2px;
+  margin: 3px;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 7px;
+  font-size: calc(4px + 2vmin);
+}
+
+.site-footer{
+  background-color: #5d5b6a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
 }
 
 @keyframes App-logo-spin {

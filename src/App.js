@@ -16,7 +16,7 @@ function App() {
   });
 
   const getKota = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "http://localhost:3030/victor/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -60,7 +60,7 @@ function App() {
 
 
   const getMakanan = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "http://localhost:3030/victor/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -104,7 +104,7 @@ function App() {
 
 
   const getObjekWisata = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "http://localhost:3030/victor/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -148,7 +148,7 @@ function App() {
 
 
   const getOlehOleh = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "http://localhost:3030/victor/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -209,23 +209,73 @@ function App() {
   }
 
   return (
-    <div className="App">
-                <header className="App-header">
-                  <input onChange={handleChange} type="text" />
-                  <button onClick={function(event){ getKota()}}>Cari Kota</button>
-                  <button onClick={function(event){ getMakanan()}}>Cari Makanan</button>
-                  <button onClick={function(event){ getObjekWisata()}}>Cari Objek Wisata</button>
-                  <button onClick={function(event){ getOlehOleh()}}>Cari Oleh-oleh</button>
-                  <ol>
-                    {value.users.map((item, i) => 
-                    <li key={i}>
-                      Kota :{item.nama}<br />
-                      Makanan : {item.makanan}<br />
-                      Objek Wisata : {item.objekwisata}<br />
-                      Oleh-oleh : {item.oleh} </li>)}
-                  </ol>
-                </header>
+    <div>
+      <header className="App-header">
+      <div className="container">
+        <div className="site-header-inner">
+          <div className="brand">
+            <h1 className="m-0">
+              <h2>Jalan.an</h2>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header className="Title-header">
+      <div className="container">
+        <div className="site-header-inner">
+          <div className="brand">
+            <h1 className="m-0">
+              <h2>Cari Tempat Liburan Kamu</h2>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header> 
+
+    <body className="Body">
+      <div>
+      <input className="search" onChange={handleChange} type="text" />
+      </div>    
+      <div>    
+        <button className="button" onClick={function(event){ getKota()}}>Cari Kota</button>
+        <button className="button" onClick={function(event){ getMakanan()}}>Cari Makanan</button>
+        <button className="button" onClick={function(event){ getObjekWisata()}}>Cari Objek Wisata</button>
+        <button className="button" onClick={function(event){ getOlehOleh()}}>Cari Oleh-oleh</button>
+      </div>  
+      </body>
+      <body className="Isi">
+      <div>
+        <ol>
+          {value.users.map((item, i) => 
+            <li key={i}>
+              Kota :{item.nama}<br />
+              Makanan : {item.makanan}<br />
+              Objek Wisata : {item.objekwisata}<br />
+              Oleh-oleh : {item.oleh} </li>)}
+        </ol>
+      </div>
+      </body>
+
+      <footer className="site-footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-4">
+              <h4>Jalan.an</h4>
+                <p> Cari Tempat Liburan Kamu </p>
               </div>
+            </div>
+            <hr />
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-sm-6 col-xs-12">
+                <p className="copyright-text"> Copyright 2020 | Suka-suka team</p>
+              </div>
+            </div>
+          </div>
+      </footer>
+    </div>
   );
 }
 
