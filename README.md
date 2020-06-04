@@ -1,3 +1,6 @@
+#Jalan.an
+Jalan.an is a semantic web to help you find tourist destination easily
+
 ### Installation
 Apache Jena Fuseki
 1. Download Apache Jena Fuseki di https://jena.apache.org/download/
