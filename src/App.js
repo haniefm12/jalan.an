@@ -16,7 +16,7 @@ function App() {
   });
 
   const getKota = async () => {
-    const BASE_URL = "http://localhost:3030/victor/query";
+    const BASE_URL = "http://localhost:3030/jalan.an/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -60,7 +60,7 @@ function App() {
 
 
   const getMakanan = async () => {
-    const BASE_URL = "http://localhost:3030/victor/query";
+    const BASE_URL = "http://localhost:3030/jalan.an/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -104,7 +104,7 @@ function App() {
 
 
   const getObjekWisata = async () => {
-    const BASE_URL = "http://localhost:3030/victor/query";
+    const BASE_URL = "http://localhost:3030/jalan.an/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -148,7 +148,7 @@ function App() {
 
 
   const getOlehOleh = async () => {
-    const BASE_URL = "http://localhost:3030/victor/query";
+    const BASE_URL = "http://localhost:3030/jalan.an/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -246,14 +246,18 @@ function App() {
       </body>
       <body className="Isi">
       <div>
-        <ol>
+        <table>
+        <td>
           {value.users.map((item, i) => 
-            <li key={i}>
-              Kota :{item.nama}<br />
+            <tr key={i}>
+              Kota : {item.nama}<br />
               Makanan : {item.makanan}<br />
               Objek Wisata : {item.objekwisata}<br />
-              Oleh-oleh : {item.oleh} </li>)}
-        </ol>
+              Oleh-oleh : {item.oleh} 
+              </tr>
+              )}
+        </td>
+        </table>
       </div>
       </body>
 
@@ -270,7 +274,7 @@ function App() {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-sm-6 col-xs-12">
-                <p className="copyright-text"> Copyright 2020 | Suka-suka team</p>
+                <p className="copyright-text"> Copyright 2020 | Jalan.an Team</p>
               </div>
             </div>
           </div>
