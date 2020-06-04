@@ -1,4 +1,4 @@
-#Jalan.an
+## Jalan.an
 Jalan.an is a semantic web to help you find tourist destination easily
 
 ### Installation
