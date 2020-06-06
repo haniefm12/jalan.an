@@ -60,6 +60,10 @@ id:010
     lw:objekwisata      "Benteng Fort Victoria" ;
     lw:makanan      	"Ikan Kuah Pala" ;
     lw:oleh       		"Kayu Putih" .
+
+id:011
+	lw:nama     		"Bandung" ;
+    lw:makanan      	"Cilok" .
 	
 id:101
 	lw:provinsi	"D.I. Yogyakarta" .

@@ -44,8 +44,11 @@
 }
 
 .search{
-  width: 400px;
+  width: 100%;
   border-style: outset;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-width: 0.5px;
   border-radius: 7px;
   margin: 3px;

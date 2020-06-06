@@ -10,11 +10,6 @@ function App() {
     input: ''
   });
 
-  useEffect(() => {
-    // Update the document title using the browser API
-
-  });
-
   const getKota = async () => {
     const BASE_URL = "http://localhost:3030/jalan.an/query";
 
@@ -26,14 +21,13 @@ function App() {
     const queryData = {
       query:
         `PREFIX lw:<http://jalanan.com/ns/listwisata>
-        SELECT ?makanan ?nama ?objekwisata ?oleh 
+        SELECT ?id ?makanan ?nama ?objekwisata ?oleh 
         WHERE {
-            ?lw lw:nama ?nama.
-            ?lw lw:makanan ?makanan.
-            ?lw lw:objekwisata ?objekwisata.
-            ?lw lw:oleh ?oleh;
-
-        FILTER contains(?nama, "${value.input}")
+            ?id lw:nama ?nama;
+            OPTIONAL {?id lw:makanan ?makanan}
+            OPTIONAL {?id lw:objekwisata ?objekwisata}
+            OPTIONAL {?id lw:oleh ?oleh}
+            FILTER contains(lcase(str(?nama)), lcase(str("${value.input ? value.input : ''}")))
         }`
     };
 
@@ -72,12 +66,11 @@ function App() {
         `PREFIX lw:<http://jalanan.com/ns/listwisata>
         SELECT ?makanan ?nama ?objekwisata ?oleh 
         WHERE {
-            ?lw lw:nama ?nama.
-            ?lw lw:makanan ?makanan.
-            ?lw lw:objekwisata ?objekwisata.
-            ?lw lw:oleh ?oleh;
-
-        FILTER contains(?makanan, "${value.input}")
+          ?id lw:makanan ?makanan;
+          OPTIONAL {?id lw:nama ?nama}
+          OPTIONAL {?id lw:objekwisata ?objekwisata}
+          OPTIONAL {?id lw:oleh ?oleh}
+            FILTER contains(lcase(str(?makanan)), lcase(str("${value.input ? value.input : ''}")))
         }`
     };
 
@@ -116,12 +109,11 @@ function App() {
         `PREFIX lw:<http://jalanan.com/ns/listwisata>
         SELECT ?makanan ?nama ?objekwisata ?oleh 
         WHERE {
-            ?lw lw:nama ?nama.
-            ?lw lw:makanan ?makanan.
-            ?lw lw:objekwisata ?objekwisata.
-            ?lw lw:oleh ?oleh;
-
-        FILTER contains(?objekwisata, "${value.input}")
+          ?id lw:objekwisata ?objekwisata;
+          OPTIONAL {?id lw:nama ?nama}
+          OPTIONAL {?id lw:makanan ?makanan}
+          OPTIONAL {?id lw:oleh ?oleh}
+            FILTER contains(lcase(str(?objekwisata)), lcase(str("${value.input ? value.input : ''}")))
         }`
     };
 
@@ -158,14 +150,15 @@ function App() {
     const queryData = {
       query:
         `PREFIX lw:<http://jalanan.com/ns/listwisata>
-        SELECT ?makanan ?nama ?objekwisata ?oleh 
-        WHERE {
-            ?lw lw:nama ?nama.
-            ?lw lw:makanan ?makanan.
-            ?lw lw:objekwisata ?objekwisata.
-            ?lw lw:oleh ?oleh;
+        PREFIX id:<http://jalanan.com/ns/data>
 
-        FILTER contains(?oleh, "${value.input}")
+        SELECT ?oleh ?nama ?makanan ?objekwisata
+        WHERE {
+          ?id lw:oleh  ?oleh  .
+              OPTIONAL {?id lw:nama ?nama}
+              OPTIONAL {?id lw:makanan ?makanan}
+              OPTIONAL {?id lw:objekwisata ?objekwisata}
+            FILTER contains(lcase(str(?oleh)), lcase(str("${value.input ? value.input : ''}")))
         }`
     };
 
