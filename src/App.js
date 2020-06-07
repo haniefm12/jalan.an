@@ -11,7 +11,7 @@ function App() {
   });
 
   const getKota = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "https://qrary-fuseki-service.herokuapp.com/jalanan";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -20,7 +20,7 @@ function App() {
 
     const queryData = {
       query:
-        `PREFIX lw:<http://jalanan.com/ns/listwisata>
+        `PREFIX lw:<https://qrary-fuseki-service.herokuapp.com/jalanan>
         SELECT ?id ?makanan ?nama ?objekwisata ?oleh 
         WHERE {
             ?id lw:nama ?nama;
@@ -54,7 +54,7 @@ function App() {
 
 
   const getMakanan = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "https://qrary-fuseki-service.herokuapp.com/jalanan";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -63,7 +63,7 @@ function App() {
 
     const queryData = {
       query:
-        `PREFIX lw:<http://jalanan.com/ns/listwisata>
+        `PREFIX lw:<https://qrary-fuseki-service.herokuapp.com/jalanan>
         SELECT ?makanan ?nama ?objekwisata ?oleh 
         WHERE {
           ?id lw:makanan ?makanan;
@@ -97,7 +97,7 @@ function App() {
 
 
   const getObjekWisata = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "https://qrary-fuseki-service.herokuapp.com/jalanan";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -106,7 +106,7 @@ function App() {
 
     const queryData = {
       query:
-        `PREFIX lw:<http://jalanan.com/ns/listwisata>
+        `PREFIX lw:<https://qrary-fuseki-service.herokuapp.com/jalanan>
         SELECT ?makanan ?nama ?objekwisata ?oleh 
         WHERE {
           ?id lw:objekwisata ?objekwisata;
@@ -140,7 +140,7 @@ function App() {
 
 
   const getOlehOleh = async () => {
-    const BASE_URL = "http://localhost:3030/jalan.an/query";
+    const BASE_URL = "https://qrary-fuseki-service.herokuapp.com/jalanan";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -149,8 +149,8 @@ function App() {
 
     const queryData = {
       query:
-        `PREFIX lw:<http://jalanan.com/ns/listwisata>
-        PREFIX id:<http://jalanan.com/ns/data>
+        `PREFIX lw:<https://qrary-fuseki-service.herokuapp.com/jalanan>
+        PREFIX id:<https://qrary-fuseki-service.herokuapp.com/jalanan>
 
         SELECT ?oleh ?nama ?makanan ?objekwisata
         WHERE {
