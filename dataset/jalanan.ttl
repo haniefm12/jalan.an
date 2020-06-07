@@ -1,5 +1,5 @@
-@prefix lw: <http://jalanan.com/ns/listwisata> .
-@prefix id: <http://jalanan.com/ns/data> .
+@prefix lw:    <https://qrary-fuseki-service.herokuapp.com/jalanan> .
+@prefix id:    <https://qrary-fuseki-service.herokuapp.com/jalanan> .
 
 id:001     
 	lw:nama     		"Yogyakarta" ;
@@ -60,49 +60,3 @@ id:010
     lw:objekwisata      "Benteng Fort Victoria" ;
     lw:makanan      	"Ikan Kuah Pala" ;
     lw:oleh       		"Kayu Putih" .
-
-id:011
-	lw:nama     		"Bandung" ;
-    lw:makanan      	"Cilok" .
-	
-id:101
-	lw:provinsi	"D.I. Yogyakarta" .
-	
-id:102
-	lw:provinsi	"Sumatera Utara" .
-
-id:103
-	lw:provinsi	"Sumatera Selatan" .
-	
-id:104
-	lw:provinsi	"Sumatera Barat" .
-	
-id:105
-	lw:provinsi	"Jawa Barat" .
-
-id:106
-	lw:provinsi	"Jawa Tengah" .
-	
-id:107
-	lw:provinsi	"Jawa Timur" .
-	
-id:108
-	lw:provinsi	"Papua Barat" .
-	
-id:109
-	lw:provinsi	"Nusa Tenggara Barat" .
-	
-id:110
-	lw:provinsi	"Maluku" .
-	
-	
-id:001 lw:berada id:101 .
-id:002 lw:berada id:102 .
-id:003 lw:berada id:103 .
-id:004 lw:berada id:104 .
-id:005 lw:berada id:105 .
-id:006 lw:berada id:106 .
-id:007 lw:berada id:107 .
-id:008 lw:berada id:108 .
-id:009 lw:berada id:109 .
-id:010 lw:berada id:110 .
